@@ -26,12 +26,12 @@ const AuthStack = () => {
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
-        options={{title: 'Masuk SIPS'}}
+        options={{title: 'Masuk / Login '}}
       />
       <Stack.Screen
         name="SignUpScreen"
         component={SignUpScreen}
-        options={{title: 'Buat Akun SIPS'}}
+        options={{title: 'Buat Akun '}}
       />
     </Stack.Navigator>
   );

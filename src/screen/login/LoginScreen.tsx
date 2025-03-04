@@ -54,7 +54,7 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
 
   return (
     <BasicLayout
-      header={{title: 'Masuk SIPS'}}
+      header={{title: 'Masuk SIPS2'}}
       cardStyle={styles.fillContainer}>
       <Animated.ScrollView
         entering={FadeIn}

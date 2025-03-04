@@ -15,15 +15,10 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
       underlayStyle={styles.fillContainer}
       underlayChildren={
         <View style={styles.underlay}>
-          <Image
-            style={styles.logo_jatimprov}
-            source={require('@assets/images/logo_jatimprov_kars.png')}
-            resizeMode="contain"
-          />
           <View style={styles.logo_sips_container}>
             <Image
               style={styles.logo_sips}
-              source={require('@assets/images/logo_sips_with_label.png')}
+              source={require('@assets/images/logo_new.png')}
               resizeMode="contain"
             />
           </View>
@@ -39,9 +34,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
           align="center"
           mb="_8"
           style={{color: colors.primary}}>
-          Sistem Informasi Pasien (SIPS)
-          {'\n'} Rumah Sakit Umum Daerah Dr. Soetomo
-          {'\n'} Pemerintah Provinsi Jawa Timur.
+          Sistem Scan App
         </Text>
         <Button
           mode="contained"
@@ -56,7 +49,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
           Buat Akun
         </Button>
         <Text fs="sm" style={{color: colors.textMuted}}>
-          SIPS Versi 1.0
+        Scan App Versi 1.0
         </Text>
       </View>
     </BasicLayout>
