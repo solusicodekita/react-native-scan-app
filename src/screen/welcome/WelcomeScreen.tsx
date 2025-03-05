@@ -16,11 +16,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
       underlayChildren={
         <View style={styles.underlay}>
           <View style={styles.logo_sips_container}>
-            <Image
-              style={styles.logo_sips}
-              source={require('@assets/images/logo_new.png')}
-              resizeMode="contain"
-            />
+            
           </View>
         </View>
       }>

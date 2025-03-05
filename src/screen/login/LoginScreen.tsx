@@ -62,7 +62,7 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
         style={styles.fillContainer}>
         <View style={styles.formContainer}>
           <Text fw="Medium" fs="sm" ml="_5" mb="_2">
-            No. Rekam Medik
+            Username
           </Text>
           <TextInput
             inputMode={'numeric'}
@@ -95,7 +95,7 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
           <View
             style={[styles.belumDaftarContainer, {borderColor: colors.border}]}>
             <Text fs="sm" style={{color: colors.textMuted}}>
-              Belum punya akun SIPS?{'\n'}Silakan daftar dulu di sini.
+              Belum punya akun?{'\n'}Silakan daftar dulu di sini.
             </Text>
             <Button
               mode="outlined"
