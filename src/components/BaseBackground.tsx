@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 const BACKGROUND_IMAGE = (
   <ImageBackground
     style={styles.bg}
-    source={require('@assets/images/scanapp.png')}
+    source={require('@assets/images/pbb_bg.png')}
     resizeMode="cover"
   />
 );

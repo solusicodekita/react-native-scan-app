@@ -30,7 +30,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
           align="center"
           mb="_8"
           style={{color: colors.primary}}>
-          Sistem Scan App
+          Sistem PBB App
         </Text>
         <Button
           mode="contained"
@@ -45,7 +45,7 @@ const WelcomeScreen = ({navigation}: WelcomeScreenProps) => {
           Buat Akun
         </Button>
         <Text fs="sm" style={{color: colors.textMuted}}>
-        Scan App Versi 1.0
+        PBB App Versi 1.0
         </Text>
       </View>
     </BasicLayout>

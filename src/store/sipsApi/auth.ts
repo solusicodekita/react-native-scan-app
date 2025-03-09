@@ -4,7 +4,7 @@ import {resetGenericPassword, setGenericPassword} from 'react-native-keychain';
 import type {SipsResponse} from './types';
 
 export const sipsApiAuth = createApi({
-  reducerPath: 'sips/api/auth',
+  reducerPath: 'login',
   baseQuery: fetchBaseQuery({
     baseUrl: Config.SIPS_API_BASE_URL,
     timeout: 60 * 1000,
@@ -12,19 +12,19 @@ export const sipsApiAuth = createApi({
   endpoints: builder => ({
     login: builder.mutation<
       SipsResponse,
-      {no_rekam_medik: string; password: string}
+      {email: string; password: string}
     >({
-      query: ({no_rekam_medik, password}) => ({
+      query: ({email, password}) => ({
         url: '/login',
         method: 'POST',
-        body: {no_rekam_medik, password},
+        body: {email, password},
         responseHandler: async response => {
           const json = await response.json();
 
           // simpan username dan password ke secure storage
           // jika login berhasil
           if (json?.metadata?.code === 200) {
-            await setGenericPassword(no_rekam_medik, password);
+            await setGenericPassword(email, password);
           }
 
           return json;

@@ -216,7 +216,7 @@ export const customTheme = {
   // dark: false,
   colors: {
     ...DefaultTheme.colors,
-    primary: 'rgb(11, 64, 65)',
+    primary: 'rgb(12, 11, 65)',
     secondary: 'rgb(255, 206, 0)',
     tertiary: 'rgb(11, 161, 75)',
     textMuted: 'rgb(157, 170, 170)',

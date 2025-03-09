@@ -16,14 +16,14 @@ import {apiSipsAuth} from '@store/api/sips/auth/endpoints';
 const LoginScreen = ({navigation}: LoginScreenProps) => {
   const {colors} = useTheme();
   const dispatch = useAppDispatch();
-  const no_rekam_medik = useSharedValue('12991902');
-  const password = useSharedValue('passmasteritki');
+  const email = useSharedValue('');
+  const password = useSharedValue('');
   const isLoading = useSharedValue(false);
 
   const submit = async () => {
-    if (!no_rekam_medik.value) {
+    if (!email.value) {
       return navigation.navigate('BottomAlert', {
-        text: 'Silakan isi nomor rekam medis',
+        text: 'Silakan isi email',
       });
     }
 
@@ -37,7 +37,7 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
 
     const r = await dispatch(
       apiSipsAuth.endpoints.login.initiate({
-        no_rekam_medik: no_rekam_medik.value,
+        email: email.value,
         password: password.value,
       }),
     );
@@ -62,12 +62,12 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
         style={styles.fillContainer}>
         <View style={styles.formContainer}>
           <Text fw="Medium" fs="sm" ml="_5" mb="_2">
-            Username
+            Email
           </Text>
           <TextInput
-            inputMode={'numeric'}
+            inputMode={'email'}
             returnKeyType={'next'}
-            onChangeText={v => (no_rekam_medik.value = v)}
+            onChangeText={v => (email.value = v)}
             containerStyle={styles.textInput}
           />
           <View style={styles.labelPassword}>
@@ -113,6 +113,7 @@ const LoginScreen = ({navigation}: LoginScreenProps) => {
 };
 
 export default LoginScreen;
+
 
 const styles = StyleSheet.create({
   fillContainer: {

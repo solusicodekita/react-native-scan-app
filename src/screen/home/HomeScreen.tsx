@@ -88,43 +88,7 @@ const HomeScreen = ({navigation}: HomeScreenProps) => {
   );
 
   return (
-    <CoordinatorLayout
-      refreshControl={rc}
-      underlayChildren={
-        <RiwayatTerakhir
-          refetch={refreshing}
-          onDoneLoading={() => setRefreshing(false)}
-        />
-      }>
-      {/* <Button
-        onPress={async () => {
-          navigation.navigate('CobiApp', {x: ''});
-        }}>
-        Cobi
-      </Button> */}
-
-      {/* <Button
-        onPress={async () => {
-          await dispatch(logout());
-        }}>
-        Logout
-      </Button> */}
-
-      {/* <Button
-        onPress={async () => {
-          // console.log(l);
-          const s = store.getState();
-          console.log({
-            // _persist: s._persist,
-            // session: s.session.user,
-            // 'api/sips/auth': s['api/sips/auth'],
-            // 'api/sips/cached': s['api/sips/cached'],
-            blobCache: s.blobCache,
-          });
-        }}>
-        Cache
-      </Button> */}
-
+    <CoordinatorLayout>
       <SectionMenu />
       <SectionInformasi />
     </CoordinatorLayout>
